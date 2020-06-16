@@ -91,25 +91,16 @@ $attention-red--light: rgb(250, 230, 228);
 $success-green: rgb(117, 195, 128);
 $success-green--light: rgb(220, 250, 224);
 
-$theme-color: #ceece8;
-$theme-color--light: #eeeeee;
-$theme-color--dark: #9dd9d2;
-$theme-color--darker: #3dbfb0;
-$theme-color--darkest: #5b9189;
-$theme-color--med-light: $blue-400;
-
-$theme-color--green: #d7f2ba;
-$theme-color--green-darker: rgb(185, 220, 147);
+$theme-color: #f4812e;
+$theme-color--light: #f0a36c;
+$theme-color--dark: #eb7420;
+$theme-color--darker: #d45f0b;
+$theme-color--darkest: #be4f00;
 
 $theme-color--gradient: linear-gradient(
   30deg,
   $theme-color--light,
   $theme-color
-);
-$blue-gradient-med: linear-gradient(
-  5deg,
-  rgb(142, 182, 218),
-  $theme-color--med-light
 );
 /*
 ==========================
@@ -123,7 +114,6 @@ $box-shadow--hover: 3px 3px 4px rgba(0, 0, 0, 0.2);
 $max-width: 1280px;
 
 @mixin main-btn {
-  font-family: Fira Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -151,7 +141,6 @@ PAGE
 ==========================
 */
 @mixin page {
-  background-color: $blue-100;
   min-width: 100%;
   min-height: 100vh;
   padding: 0px 30px;

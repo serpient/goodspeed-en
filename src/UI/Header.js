@@ -18,29 +18,28 @@ const MobileHeader = () => {
   const [menuIsVisble, setMenuVisibility] = useState(false);
   return (
     <section className="menu-container--mobile">
+      <SocialMediaLinks />
       <Logo />
       <button className="menu-btn" onClick={() => setMenuVisibility(true)}>
-        <div className="menu-btn--dash" />
-        <div className="menu-btn--dash" />
+        <i className="fas fa-bars"></i>
       </button>
       <section
         style={{ visibility: menuIsVisble ? 'visible' : 'hidden' }}
-        className="menu-box"
+        className="menu-box--container"
       >
-        <button
-          className="menu-btn--close"
+        <section
+          className="modal--container"
           onClick={() => setMenuVisibility(false)}
-        >
-          X
-        </button>
-        <Link to="/">
-          <img
-            className="menu-logo"
-            src={require('../assets/goodspeedfilm_logo1.gif')}
-            alt="logo"
-          />
-        </Link>
-        <ExternalLinks />
+        />
+        <div className="menu-box">
+          <button
+            className="menu-btn--close"
+            onClick={() => setMenuVisibility(false)}
+          >
+            X
+          </button>
+          <ExternalLinks />
+        </div>
       </section>
     </section>
   );
@@ -54,8 +53,8 @@ const DesktopHeader = ({ location }) => {
   return (
     <section className="menu-container--desktop">
       <Logo />
-      <ContactInfo />
       <ExternalLinks currentPath={currentPath} />
+      <SocialMediaLinks />
     </section>
   );
 };
@@ -80,7 +79,11 @@ const ExternalLinks = ({ currentPath }) => (
     <a href="http://www.goodspeedfilm.com/" alt="Chinese Page">
       中文
     </a>
-    <div />
+  </div>
+);
+
+const SocialMediaLinks = () => (
+  <section className="social--container">
     <a
       className="contact-info--facebook"
       alt="Facebook"
@@ -95,29 +98,15 @@ const ExternalLinks = ({ currentPath }) => (
     >
       <i className="fab fa-youtube"></i>
     </a>
-  </div>
+  </section>
 );
 
 const isActiveNav = (currentPath, route) => {
   return currentPath === route ? 'sub-links--active' : '';
 };
 
-const ContactInfo = () => {
-  return (
-    <section className="contact-info--container">
-      <h1>+886-2-23979987</h1>
-      <h4>FEEL FREE TO CALL US NOW!</h4>
-      <i className="fas fa-phone-square"></i>
-    </section>
-  );
-};
-
 const Logo = () => (
   <Link className="logo-container" to="/">
-    <img
-      className="logo"
-      src={require('../assets/goodspeedfilm_logo1.gif')}
-      alt="logo"
-    />
+    <img className="logo" src={require('../assets/logo.png')} alt="logo" />
   </Link>
 );

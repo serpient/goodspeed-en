@@ -1,18 +1,18 @@
 @import '../styles/_shared.scss';
 
 .header {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.719);
   position: relative;
   z-index: 10;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  padding: 15px 20px;
   text-align: left;
 
-  .logo {
-    object-fit: contain;
-    width: 475px;
-  }
   a {
     color: black;
     &:hover {
@@ -20,81 +20,62 @@
     }
   }
 
-  .contact-info--container {
-    grid-area: contact;
-
+  .social--container {
     display: grid;
-    grid-template-columns: auto 60px;
-    grid-template-areas: 'phone-text icon' 'phone-subtext icon';
-    grid-gap: 7px;
-    text-align: right;
-
-    h1 {
-      grid-area: phone-text;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 40px);
+    align-self: center;
+    .contact-info--facebook,
+    .contact-info--youtube {
+      color: $grey-100 !important;
       font-size: 30px;
-      margin: 0;
-    }
-
-    h4 {
-      grid-area: phone-subtext;
-      margin: 0;
-    }
-
-    i {
-      grid-area: icon;
-      font-size: 60px;
       align-self: center;
+      padding: 8px 0px !important;
     }
   }
 
   .menu-container--desktop {
+    padding: 0px 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'logo contact' 'nav nav';
-    justify-items: flex-end;
-    align-items: center;
+    grid-template-columns: 75px auto 75px;
+    grid-template-areas: 'logo nav social';
+    justify-items: center;
+    align-items: stretch;
 
     .logo-container {
       grid-area: logo;
       justify-self: start;
       margin-left: 0px;
+      .logo {
+        padding-top: 5px;
+        object-fit: contain;
+        width: 75px;
+      }
+    }
+
+    .social--container {
+      grid-area: social;
     }
 
     .sub-links {
-      width: 100%;
-      text-transform: uppercase;
-      font-size: 16px;
-      background-color: $grey-100;
-      box-shadow: $box-shadow;
-      border-top: 1px solid $grey-600;
-      border-bottom: 1px solid $grey-600;
       grid-area: nav;
+      text-transform: uppercase;
+      font-size: 20px;
       display: grid;
-      grid-template-columns: repeat(6, 130px) auto repeat(2, 100px);
+      font-weight: bold;
+      grid-template-columns: repeat(6, 130px) auto;
       text-align: center;
-      align-items: stretch;
       a {
-        padding: 20px 0;
-        color: $grey-800;
+        padding: 30px 0;
+        color: white;
         &:hover {
-          color: $grey-900;
-          background-color: $grey-300;
+          background-color: $theme-color;
         }
       }
     }
 
-    .contact-info--facebook,
-    .contact-info--youtube {
-      color: $grey-700 !important;
-      font-size: 35px;
-      align-self: center;
-      padding: 8px 0px !important;
-    }
-
     .sub-links--active {
-      color: $grey-900;
-      background-color: $grey-300;
-      font-weight: bold;
+      background-color: $theme-color;
     }
   }
 
@@ -105,47 +86,44 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) {
-  .logo {
-    top: 30px;
-    object-fit: contain;
-    min-width: 300px;
-    width: 400px;
-  }
-
   .header {
-    padding-top: 20px;
-    text-align: center;
-
     .menu-container--desktop {
       display: none;
     }
 
     .menu-container--mobile {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: flex-end;
-      align-items: center;
-      a:first-child {
-        img {
-          top: 10px;
-        }
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 'social logo btn';
+      padding: 0px 20px;
+      justify-items: center;
+
+      .social--container {
+        justify-self: start;
       }
 
       .menu-btn {
+        grid-area: btn;
+        justify-self: end;
         position: relative;
-        background-color: transparentize($color: #000000, $amount: 1);
+        background-color: transparent;
+        color: white;
         border: none;
-        width: 33px;
-        height: 33px;
-        margin: 0px;
-        padding: 0px;
-        .menu-btn--dash {
-          width: 100%;
-          border-top: 1px solid black;
-          margin-top: 4px;
+        i {
+          font-size: 30px;
         }
-        .menu-btn--dash:last-child {
-          margin-top: 8px;
+      }
+
+      .menu-box--container {
+        .modal--container {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-color: rgba(0, 0, 0, 0.397);
+          opacity: 0.8;
         }
       }
 
@@ -155,58 +133,42 @@
         right: 0px;
         top: 0px;
 
-        width: 100vw;
+        box-sizing: border-box;
+        width: 400px;
         height: 100vh;
         align-items: center;
+        justify-items: start;
         overflow-y: scroll;
+        text-align: left;
+        padding: 40px;
 
-        .contact-info--container {
-          width: 350px;
-          grid-area: unset;
-          border-bottom: 1px solid $grey-300;
-          margin: 0 auto;
-          margin-top: 130px;
-          text-align: center;
-          padding-bottom: 30px;
-        }
         .sub-links {
-          margin: 0 auto;
-          margin-top: 140px;
+          margin-top: 50px;
         }
         a {
-          width: 200px;
-          text-align: center;
+          text-transform: uppercase;
           display: block;
-          justify-self: center;
           font-style: normal;
-          font-weight: normal;
-          font-size: 32px;
-          line-height: 50px;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 60px;
           margin: 0 auto;
           &:hover {
-            color: $theme-color--darker;
+            color: $theme-color;
           }
         }
       }
-      .menu-logo {
-        object-fit: contain;
-        width: 450px;
-        // max-height: 50px;
-        position: fixed;
-        z-index: 20;
-        left: 50px;
-        top: 20px;
-      }
       .menu-btn--close {
-        background-color: white;
+        background-color: $theme-color;
+        color: white;
         border: none;
         position: fixed;
         display: block;
-        font-weight: lighter;
-        color: black;
+        font-weight: normal;
+        padding: 1px 8px;
         font-family: sans-serif;
         font-size: 25px;
-        right: 50px;
+        right: 20px;
         top: 25px;
       }
     }
@@ -215,21 +177,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
-  .logo {
-    top: 30px;
-    min-width: 50vw;
-    max-width: 70vw;
-  }
   .menu-container--mobile {
-    .menu-logo {
-      margin-top: 15px;
-      min-width: 100px;
-      height: auto;
-      max-width: 65vw;
-      object-fit: contain;
-    }
-    .menu-btn--close {
-      top: 30px !important;
-    }
   }
 }

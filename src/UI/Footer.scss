@@ -1,0 +1,8 @@
+@import '../styles/_shared.scss';
+
+.footer--container {
+  .logo {
+    max-width: 100vw;
+    object-fit: contain;
+  }
+}

@@ -1,7 +1,7 @@
 @import '../styles/_shared.scss';
 
 .loader {
-  color: $theme-color--med-light;
+  color: $theme-color;
   animation-name: spin;
   animation-duration: 500ms;
   animation-iteration-count: infinite;

@@ -102,6 +102,13 @@
         justify-self: start;
       }
 
+      .logo-container {
+        align-self: center;
+      }
+      .logo {
+        width: 60px;
+      }
+
       .menu-btn {
         grid-area: btn;
         justify-self: end;

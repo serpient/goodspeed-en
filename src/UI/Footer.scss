@@ -1,8 +1,48 @@
 @import '../styles/_shared.scss';
 
 .footer--container {
+  position: absolute;
+  width: 100vw;
+  padding: 50px;
+  box-sizing: border-box;
+  bottom: 0;
+  background-color: $grey-1000;
+  color: white;
   .logo {
+    width: 400px;
     max-width: 100vw;
     object-fit: contain;
   }
+  .footer-data {
+    h1 {
+      font-weight: normal;
+      color: $grey-500;
+      margin-bottom: 5px;
+    }
+    h3 {
+      font-weight: 600;
+      margin-top: 7px;
+      margin-bottom: 30px;
+    }
+  }
+  .footer--button {
+    background-color: $theme-color;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    &:hover {
+      background-color: $theme-color--dark;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+  .footer--container {
+    text-align: center;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
 }

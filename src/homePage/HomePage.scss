@@ -6,10 +6,13 @@
 
   .ant-carousel {
     width: auto;
-    height: 500px;
+    height: 700px;
+    .slick-list {
+      height: 700px !important;
+    }
     img {
       width: 100%;
-      height: auto;
+      height: inherit;
       object-fit: cover;
     }
     p {
@@ -21,6 +24,47 @@
       padding: 10px;
       margin-top: -40px;
       margin-bottom: 50px;
+    }
+  }
+
+  .home-page--services--container {
+    max-width: $max-width;
+    margin: 100px auto;
+  }
+  .home-page--services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    .service {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 80px 30px auto;
+      align-items: start;
+      justify-items: center;
+    }
+    p {
+      max-width: 300px;
+    }
+    .icon--container {
+      display: grid;
+      box-sizing: border-box;
+      background-color: $theme-color;
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      align-items: center;
+      justify-items: center;
+
+      .icon--4k {
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+    i {
+      display: block;
+      font-size: 32px;
+      color: white;
     }
   }
 }

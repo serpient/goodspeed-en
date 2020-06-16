@@ -54,7 +54,7 @@ const HomePage = (props) => {
     },
     {
       icon: 'fas fa-building',
-      title: `Time-lapsed Architectural Photography`,
+      title: `Time-lapsed Recordings`,
       link: '/service/time-lapse',
       subtext: `Leave a historical testimony to your proud construction method, from the first day of construction to the completion of the building.`,
     },
@@ -74,7 +74,7 @@ const HomePage = (props) => {
   return (
     <Page location={props.location}>
       <section className="home-page--container">
-        <Carousel dotPosition="right">
+        <Carousel autoplay={true} dotPosition="right">
           {carouselItems.map((item) => {
             return (
               <div>

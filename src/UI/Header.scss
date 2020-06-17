@@ -4,7 +4,8 @@
   position: sticky !important;
   top: 0;
   left: 0;
-  max-width: 100vw;
+  width: 100vw;
+  max-width: 100%;
   background-color: rgba(0, 0, 0, 0.719);
   position: relative;
   z-index: 10;
@@ -128,6 +129,7 @@
           top: 0;
           left: 0;
           width: 100vw;
+          max-width: 100%;
           height: 100vh;
           background-color: rgba(0, 0, 0, 0.397);
           opacity: 0.8;

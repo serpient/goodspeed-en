@@ -1,11 +1,10 @@
 @import '../styles/_shared.scss';
 
 .page {
-  min-width: 100%;
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   margin-top: -110px;
-  // padding: 30px;
-  // padding: 0px 30px;
   box-sizing: border-box;
   color: $grey-700;
   padding-bottom: 20px;

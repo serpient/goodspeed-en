@@ -3,9 +3,16 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = ({ location, children }) => {
+  const [menuIsVisble, setMenuVisibility] = useState(false);
+  useEffect(() => {
+    setMenuVisibility(false);
+  }, [location.pathname]);
   return (
     <nav className="header">
-      <MobileHeader />
+      <MobileHeader
+        menuIsVisble={menuIsVisble}
+        setMenuVisibility={setMenuVisibility}
+      />
       <DesktopHeader location={location} />
       {children}
     </nav>
@@ -14,8 +21,7 @@ const Header = ({ location, children }) => {
 
 export default Header;
 
-const MobileHeader = () => {
-  const [menuIsVisble, setMenuVisibility] = useState(false);
+const MobileHeader = ({ menuIsVisble, setMenuVisibility }) => {
   return (
     <section className="menu-container--mobile">
       <SocialMediaLinks />

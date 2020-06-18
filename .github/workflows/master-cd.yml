@@ -1,0 +1,32 @@
+
+name: Master-CD
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+          git fetch --prune --unshallow
+    - uses: bahmutov/npm-install@v1
+      with:
+        useLockFile: false
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_S3_DEPLOYMENT_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_S3_DEPLOYMENT_ACCESS_KEY_SECRET }}
+        aws-region: us-east-1
+
+    - name: Build static site
+      run: npm run build --if-present
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./build/ s3://goodspeed-en --delete

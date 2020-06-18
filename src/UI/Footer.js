@@ -8,13 +8,15 @@ const Footer = () => {
       <Logo />
       {footerData.map((data) => {
         return (
-          <section className="footer-data">
+          <section key={data.label} className="footer-data">
             <h1>{data.label}</h1>
             <h3>{data.data}</h3>
           </section>
         );
       })}
-      <Link className="footer--button">Contact Us</Link>
+      <Link to="/contact" className="footer--button">
+        Contact Us
+      </Link>
     </section>
   );
 };

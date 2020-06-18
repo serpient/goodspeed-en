@@ -2,8 +2,36 @@ import React from 'react';
 import Page from '../UI/Page';
 import './ContactPage.scss';
 import FormContainer from '../UI/FormContainer';
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
+import { FieldWithError } from '../UI/FormParts';
+
+const contactSchema = Yup.object().shape({
+  full_name: Yup.string().required('Your name is required'),
+  email: Yup.string().email().required('Your email is required'),
+  phone: Yup.string().required('Your phone number is required'),
+  subject: Yup.string().notRequired(),
+  message: Yup.string().notRequired(),
+});
 
 const ContactPage = () => {
+  const onSubmit = (values) => {
+    console.log(values);
+    fetch(
+      'https://z5df64mkl7.execute-api.us-east-1.amazonaws.com/goodspeed/form',
+      {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      }
+    )
+      .then((response) => console.log({ response }))
+      .then((data) => console.log({ data }))
+      .catch((error) => console.error({ error }));
+  };
   return (
     <Page>
       <section className="contact-page--container">
@@ -13,61 +41,57 @@ const ContactPage = () => {
         <section className="contact-page--content">
           <FormContainer>
             <h2>Send a Message</h2>
-            <form
-              name="contact-message"
-              method="POST"
-              netlify={true}
-              enctype="application/x-www-form-urlencoded"
+            <Formik
+              validationSchema={contactSchema}
+              initialValues={{
+                full_name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: '',
+              }}
+              onSubmit={(values, actions) => {
+                onSubmit(values);
+              }}
             >
-              <label>
-                Your Name
-                <input
+              <Form>
+                <FieldWithError
+                  label={`Your Name`}
+                  name={'full_name'}
                   type="text"
-                  name="full_name"
-                  minlength={1}
-                  required={true}
                 />
-              </label>
-              <label>
-                Email
-                <input
-                  type="email"
-                  name="email"
-                  minlength={1}
-                  required={true}
-                />
-              </label>
-              <label>
-                Contact Number
-                <input
+                <FieldWithError label={`Email`} name={'email'} type="email" />
+                <FieldWithError
+                  label={`Contact Number`}
+                  name={'phone'}
                   type="tel"
-                  name="phone_number"
-                  minlength={1}
-                  required={true}
                 />
-              </label>
-              <label>
-                Subject <input type="text" name="subject_line" />
-              </label>
-              <label>
-                Message <textarea name="message" />
-              </label>
-              <button className="btn-primary" type="submit">
-                Send
-              </button>
-            </form>
+                <FieldWithError
+                  label={`Subject`}
+                  name={'subject'}
+                  type="text"
+                />
+                <FieldWithError
+                  label={`Message`}
+                  name={'message'}
+                  type="text"
+                />
+                <button className="btn-primary" type="submit">
+                  Send
+                </button>
+              </Form>
+            </Formik>
           </FormContainer>
           <div className="contact-page--map">
             <iframe
               title={'Office location'}
               src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d7229.5088346829825!2d121.526542!3d25.042407!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d25.0424074!2d121.52654159999999!5e0!3m2!1sen!2sus!4v1592444900531!5m2!1sen!2sus"
-              width="600"
               height="450"
-              frameborder="0"
-              style={{ border: 0, maxWidth: '100%' }}
-              allowfullscreen=""
+              frameBorder="0"
+              style={{ border: 0, maxWidth: '100%', width: '100%' }}
+              allowFullScreen={true}
               aria-hidden="false"
-              tabindex="0"
+              tabIndex="0"
             ></iframe>
             <h2>Address</h2>
             <p>

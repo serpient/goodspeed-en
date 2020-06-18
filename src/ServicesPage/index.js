@@ -8,14 +8,18 @@ const ServicesPage = ({ location }) => {
   const [currentService, setCurrentService] = useState(null);
   const [currentServiceData, setCurrentServiceData] = useState(null);
   useEffect(() => {
-    setCurrentService(location.pathname);
+    let defaultService =
+      location.pathname === '/services'
+        ? '/service/video-repair'
+        : location.pathname;
+
+    setCurrentService(defaultService);
     const dataSet = serviceItems.find(
-      (service) => service.link === location.pathname
+      (service) => service.link === defaultService
     );
     setCurrentServiceData(dataSet);
   }, [location.pathname]);
 
-  console.log(currentServiceData);
   return (
     <Page>
       <section className="services-page--container">

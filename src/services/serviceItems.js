@@ -10,20 +10,6 @@ import MultimediaCloud from './MultimediaCloud';
 
 const serviceItems = [
   {
-    icon: 'fas fa-video',
-    title: 'Video Repair',
-    link: '/service/video-repair',
-    subtext: `We can handle all kinds of video & audio production and digital communication problems for you. 8mm, 16mm, 35mm film repair and digitalization.`,
-    component: <VideoRepair />,
-  },
-  {
-    icon: 'fas fa-film',
-    title: 'Microvolume scanning',
-    link: '/service/micro-scan',
-    subtext: `Use our miniaturized digital technology to help you preserve your precious historical data that has been destroyed by time`,
-    component: <Microvolume />,
-  },
-  {
     icon: 'fas fa-users',
     title: `Digital Collection of Everyday Life`,
     link: '/service/digital-collection',
@@ -47,6 +33,20 @@ const serviceItems = [
     link: '/service/hd',
     subtext: `4K, 2K, HD high-definition video, giving you unlimited imagination space.`,
     component: <HighDefVideo />,
+  },
+  {
+    icon: 'fas fa-video',
+    title: 'Video Repair',
+    link: '/service/video-repair',
+    subtext: `We can handle all kinds of video & audio production and digital communication problems for you. 8mm, 16mm, 35mm film repair and digitalization.`,
+    component: <VideoRepair />,
+  },
+  {
+    icon: 'fas fa-film',
+    title: 'Microvolume scanning',
+    link: '/service/micro-scan',
+    subtext: `Use our miniaturized digital technology to help you preserve your precious historical data that has been destroyed by time`,
+    component: <Microvolume />,
   },
   {
     icon: 'fas fa-building',

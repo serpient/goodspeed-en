@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/goodspeed-en/static/css/main.0e697cfa.chunk.css",
+    "main.js": "/goodspeed-en/static/js/main.566ba4ad.chunk.js",
+    "main.js.map": "/goodspeed-en/static/js/main.566ba4ad.chunk.js.map",
+    "runtime-main.js": "/goodspeed-en/static/js/runtime-main.860b2553.js",
+    "runtime-main.js.map": "/goodspeed-en/static/js/runtime-main.860b2553.js.map",
+    "static/css/2.f47422e6.chunk.css": "/goodspeed-en/static/css/2.f47422e6.chunk.css",
+    "static/js/2.c2a17fa6.chunk.js": "/goodspeed-en/static/js/2.c2a17fa6.chunk.js",
+    "static/js/2.c2a17fa6.chunk.js.map": "/goodspeed-en/static/js/2.c2a17fa6.chunk.js.map",
+    "index.html": "/goodspeed-en/index.html",
+    "precache-manifest.4c80d71397eb2bc73212eaf97b3645e2.js": "/goodspeed-en/precache-manifest.4c80d71397eb2bc73212eaf97b3645e2.js",
+    "service-worker.js": "/goodspeed-en/service-worker.js",
+    "static/css/2.f47422e6.chunk.css.map": "/goodspeed-en/static/css/2.f47422e6.chunk.css.map",
+    "static/css/main.0e697cfa.chunk.css.map": "/goodspeed-en/static/css/main.0e697cfa.chunk.css.map",
+    "static/js/2.c2a17fa6.chunk.js.LICENSE.txt": "/goodspeed-en/static/js/2.c2a17fa6.chunk.js.LICENSE.txt",
+    "static/media/4K-HDTV-relative-sizes8.jpg": "/goodspeed-en/static/media/4K-HDTV-relative-sizes8.8372aa1b.jpg",
+    "static/media/citi_private.jpg": "/goodspeed-en/static/media/citi_private.2c2f6b1a.jpg",
+    "static/media/cnn.jpg": "/goodspeed-en/static/media/cnn.037867e5.jpg",
+    "static/media/discovery_channel.jpg": "/goodspeed-en/static/media/discovery_channel.201896c7.jpg",
+    "static/media/f07.jpg": "/goodspeed-en/static/media/f07.9820e167.jpg",
+    "static/media/f09.jpg": "/goodspeed-en/static/media/f09.984b6d68.jpg",
+    "static/media/f10.jpg": "/goodspeed-en/static/media/f10.ac7211f3.jpg",
+    "static/media/f11.jpg": "/goodspeed-en/static/media/f11.e97664b9.jpg",
+    "static/media/goodspeedfilm_logo1.gif": "/goodspeed-en/static/media/goodspeedfilm_logo1.a29591d3.gif",
+    "static/media/hero-1.jpg": "/goodspeed-en/static/media/hero-1.187e070f.jpg",
+    "static/media/hero-2.jpg": "/goodspeed-en/static/media/hero-2.abbc38cf.jpg",
+    "static/media/ministry_of_culture.jpg": "/goodspeed-en/static/media/ministry_of_culture.dedd1a2a.jpg",
+    "static/media/national_center_for_traditional_arts.png": "/goodspeed-en/static/media/national_center_for_traditional_arts.b4be6c92.png",
+    "static/media/national_central_library.png": "/goodspeed-en/static/media/national_central_library.67f534d8.png",
+    "static/media/national_geographic_center.png": "/goodspeed-en/static/media/national_geographic_center.8226d463.png",
+    "static/media/national_taiwan_library.png": "/goodspeed-en/static/media/national_taiwan_library.3213fd09.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.860b2553.js",
+    "static/css/2.f47422e6.chunk.css",
+    "static/js/2.c2a17fa6.chunk.js",
+    "static/css/main.0e697cfa.chunk.css",
+    "static/js/main.566ba4ad.chunk.js"
+  ]
+}

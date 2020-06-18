@@ -13,50 +13,45 @@ const ContactPage = () => {
         <section className="contact-page--content">
           <FormContainer>
             <h2>Send a Message</h2>
-            <form name="contact" method="POST" data-netlify={true}>
-              <p>
-                <label>
-                  Your Name{' '}
-                  <input
-                    type="text"
-                    name="name"
-                    minlength={1}
-                    required={true}
-                  />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Email{' '}
-                  <input
-                    type="email"
-                    name="email"
-                    minlength={1}
-                    required={true}
-                  />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Contact Number{' '}
-                  <input
-                    type="tel"
-                    name="phone"
-                    minlength={1}
-                    required={true}
-                  />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Subject <input type="text" name="subject" />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Message <textarea name="message" />
-                </label>
-              </p>
+            <form
+              name="contact-message"
+              method="POST"
+              netlify={true}
+              enctype="application/x-www-form-urlencoded"
+            >
+              <label>
+                Your Name
+                <input
+                  type="text"
+                  name="full_name"
+                  minlength={1}
+                  required={true}
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  minlength={1}
+                  required={true}
+                />
+              </label>
+              <label>
+                Contact Number
+                <input
+                  type="tel"
+                  name="phone_number"
+                  minlength={1}
+                  required={true}
+                />
+              </label>
+              <label>
+                Subject <input type="text" name="subject_line" />
+              </label>
+              <label>
+                Message <textarea name="message" />
+              </label>
               <button className="btn-primary" type="submit">
                 Send
               </button>

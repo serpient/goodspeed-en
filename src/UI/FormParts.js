@@ -51,10 +51,12 @@ export const FieldWithError = ({
   type,
   component,
   placeholder,
+  isTextarea,
 }) => (
   <>
     <Label label={label} name={name} />
     <Field
+      as={isTextarea ? type : 'input'}
       type={type}
       name={name}
       id={name}

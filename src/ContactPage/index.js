@@ -74,7 +74,8 @@ const ContactPage = () => {
                 <FieldWithError
                   label={`Message`}
                   name={'message'}
-                  type="text"
+                  type="textarea"
+                  isTextarea={true}
                 />
                 <button className="btn-primary" type="submit">
                   Send

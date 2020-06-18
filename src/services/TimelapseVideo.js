@@ -2,10 +2,14 @@ import React from 'react';
 
 const TimelapseVideo = () => (
   <section>
-    <img
-      src={require('../assets/Goodspeed-timielapse.jpg')}
-      alt="timelapse camera shot"
-    />
+    <iframe
+      title="Time lapse example"
+      style={{ width: '100%', height: '500px', marginBottom: '20px' }}
+      src="https://www.youtube.com/embed/MnaxIm8BlDw"
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
     <h4>What is Time-Lapse Photography</h4>
     <p>
       Time-lapse photography is a special way of shooting. You can make a

@@ -1,4 +1,32 @@
 @import '../styles/_shared.scss';
 
 .about-page--container {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+  background-color: $grey-100;
+
+  .about-page--header {
+    background-color: $grey-100;
+    height: 300px;
+    h1 {
+      color: $grey-800;
+      font-size: 48px;
+      text-align: center;
+      padding-top: 160px;
+    }
+  }
+  .about-page--content-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: $box-shadow;
+    padding: 100px;
+    h3 {
+      font-size: 34px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
 }

@@ -61,24 +61,26 @@ const DesktopHeader = ({ location }) => {
 
 const ExternalLinks = ({ currentPath }) => (
   <div className="sub-links">
-    <Link className={isActiveNav(currentPath, '/')} to="/">
-      Home
-    </Link>
-    <Link className={isActiveNav(currentPath, '/about-us')} to="/about-us">
-      About Us
-    </Link>
-    <Link className={isActiveNav(currentPath, '/services')} to="/services">
-      Services
-    </Link>
-    <Link className={isActiveNav(currentPath, '/clients')} to="/clients">
-      Clients
-    </Link>
-    <Link className={isActiveNav(currentPath, '/contact')} to="/contact">
-      Contact Us
-    </Link>
-    <a href="http://www.goodspeedfilm.com/" alt="Chinese Page">
-      中文
-    </a>
+    <div className={isActiveNav(currentPath, '/')}>
+      <Link to="/">Home</Link>
+    </div>
+    <div className={isActiveNav(currentPath, '/about-us')}>
+      <Link to="/about-us">About Us</Link>
+    </div>
+    <div className={isActiveNav(currentPath, '/services')}>
+      <Link to="/services">Services</Link>
+    </div>
+    <div className={isActiveNav(currentPath, '/clients')}>
+      <Link to="/clients">Clients</Link>
+    </div>
+    <div className={isActiveNav(currentPath, '/contact')}>
+      <Link to="/contact">Contact Us</Link>
+    </div>
+    <div className="nav-links">
+      <a href="http://www.goodspeedfilm.com/" alt="Chinese Page">
+        中文
+      </a>
+    </div>
   </div>
 );
 
@@ -102,7 +104,7 @@ const SocialMediaLinks = () => (
 );
 
 const isActiveNav = (currentPath, route) => {
-  return currentPath === route ? 'sub-links--active' : '';
+  return currentPath === route ? 'nav-links nav-links--active' : 'nav-links';
 };
 
 const Logo = () => (

@@ -96,11 +96,11 @@ const ClientsPage = () => {
           <h1>Clients</h1>
         </section>
         <section className="clients-page--content-container">
-          <h2>
+          <h3>
             GoodSpeed has cooperative project experiences with government
             agencies and private businesses. Our objectives are to listen to
             clients, realize their needs, and offer the best quality.
-          </h2>
+          </h3>
           <div className="clients-page--client-list">
             {clientsContent.map((client) => {
               if (client.logoLink) {

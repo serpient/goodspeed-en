@@ -35,7 +35,7 @@ const App = (props) => {
         </Route>
         {serviceItems.map((services) => {
           return (
-            <Route exact path={services.link}>
+            <Route key={services.link} exact path={services.link}>
               <ServicesPage {...props} />
             </Route>
           );

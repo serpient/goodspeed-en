@@ -31,6 +31,7 @@ const ServicesPage = ({ location }) => {
             {serviceItems.map((service) => {
               return (
                 <div
+                  key={service.title}
                   className={
                     currentService === service.link ? `side-option--active` : ''
                   }

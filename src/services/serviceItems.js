@@ -3,6 +3,10 @@ import VideoRepair from './VideoRepair';
 import Microvolume from './Microvolume';
 import DigitalCollection from './DigitalCollection';
 import PanoramicTour from './PanoramicTour';
+import HighDefVideo from './HighDefVideo';
+import TimelapseVideo from './TimelapseVideo';
+import Ebook from './Ebook';
+import MultimediaCloud from './MultimediaCloud';
 
 const serviceItems = [
   {
@@ -39,31 +43,31 @@ const serviceItems = [
         <div className="icon--4k">4K</div>
       </div>
     ),
-    title: `4K 2K HD shooting and editing`,
+    title: `4K 2K HD Film Production`,
     link: '/service/hd',
     subtext: `4K, 2K, HD high-definition video, giving you unlimited imagination space.`,
-    component: null,
+    component: <HighDefVideo />,
   },
   {
     icon: 'fas fa-building',
     title: `Time-lapsed Recordings`,
     link: '/service/time-lapse',
     subtext: `Leave a historical testimony to your proud construction method, from the first day of construction to the completion of the building.`,
-    component: null,
+    component: <TimelapseVideo />,
   },
   {
     icon: 'fas fa-book-open',
     title: `EBook/Electronic Catalog`,
     link: '/service/electronic-catalog',
     subtext: `Digitalize your catalogue to increase usability, convenience and interactivity for your customers.`,
-    component: null,
+    component: <Ebook />,
   },
   {
     icon: 'fas fa-cloud',
     title: `Multimedia cloud service`,
     link: '/service/cloud',
     subtext: `Let us convert your movies and audio files into online formats, which can be browsed on various computers and Internet-accessible tools.`,
-    component: null,
+    component: <MultimediaCloud />,
   },
 ];
 

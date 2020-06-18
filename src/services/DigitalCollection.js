@@ -5,13 +5,13 @@ const DigitalCollection = () => (
     <iframe
       title="Digital Collection video"
       src="https://player.vimeo.com/video/86669530"
-      width="640"
-      height="360"
+      width="100%"
+      height="450"
       frameBorder="0"
       allow="autoplay; fullscreen"
       allowFullScreen
     ></iframe>
-    <p>
+    <p style={{ textAlign: 'center' }}>
       <a href="https://vimeo.com/86669530">庶民生活典藏</a> from{' '}
       <a href="https://vimeo.com/user23058708">Goodspeed</a> on{' '}
       <a href="https://vimeo.com">Vimeo</a>.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './homePage/index';
@@ -11,6 +11,9 @@ import Footer from './UI/Footer';
 import serviceItems from './services/serviceItems';
 
 const App = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [props.location.pathname]);
   return (
     <div className="App">
       <Header location={props.location} />

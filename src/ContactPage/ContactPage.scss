@@ -58,10 +58,13 @@
 @media only screen and (max-width: 768px) {
   .contact-page--container {
     .contact-page--content {
+      padding: 0px;
       grid-template-columns: 1fr;
       grid-template-areas: 'map' 'form';
       .form-container {
+        padding: 20px;
         grid-area: form;
+        padding-bottom: 80px;
       }
       .contact-page--map {
         grid-area: map;

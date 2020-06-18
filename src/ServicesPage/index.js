@@ -10,7 +10,7 @@ const ServicesPage = ({ location }) => {
   useEffect(() => {
     let defaultService =
       location.pathname === '/services'
-        ? '/service/video-repair'
+        ? '/service/digital-collection'
         : location.pathname;
 
     setCurrentService(defaultService);

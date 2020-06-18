@@ -38,6 +38,7 @@
     .service {
       display: flex;
       flex-direction: column;
+      align-content: center;
       a {
         align-self: center;
         margin-bottom: 10px;
@@ -52,6 +53,7 @@
       max-width: 80vw;
       font-size: 16px;
       color: $grey-800;
+      text-align: center;
     }
     .icon--container {
       display: grid;

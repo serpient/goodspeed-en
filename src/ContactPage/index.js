@@ -13,7 +13,7 @@ const ContactPage = () => {
         <section className="contact-page--content">
           <FormContainer>
             <h2>Send a Message</h2>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify={true}>
               <p>
                 <label>
                   Your Name{' '}

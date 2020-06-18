@@ -2,7 +2,7 @@ import React from 'react';
 import Page from '../UI/Page';
 import './AboutPage.scss';
 
-const AboutPage = ({}) => {
+const AboutPage = () => {
   const aboutUsContent = [
     {
       title: `Diversified digital service to meet the different needs of our clients.`,

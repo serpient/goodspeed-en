@@ -3,7 +3,7 @@ import Page from '../UI/Page';
 import './ContactPage.scss';
 import FormContainer from '../UI/FormContainer';
 
-const ContactPage = ({}) => {
+const ContactPage = () => {
   return (
     <Page>
       <section className="contact-page--container">
@@ -16,17 +16,35 @@ const ContactPage = ({}) => {
             <form name="contact" netlify>
               <p>
                 <label>
-                  Your Name <input type="text" name="name" />
+                  Your Name{' '}
+                  <input
+                    type="text"
+                    name="name"
+                    minlength={1}
+                    required={true}
+                  />
                 </label>
               </p>
               <p>
                 <label>
-                  Email <input type="email" name="email" />
+                  Email{' '}
+                  <input
+                    type="email"
+                    name="email"
+                    minlength={1}
+                    required={true}
+                  />
                 </label>
               </p>
               <p>
                 <label>
-                  Contact Number <input type="tel" name="phone" />
+                  Contact Number{' '}
+                  <input
+                    type="tel"
+                    name="phone"
+                    minlength={1}
+                    required={true}
+                  />
                 </label>
               </p>
               <p>

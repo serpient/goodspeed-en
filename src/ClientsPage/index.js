@@ -2,7 +2,7 @@ import React from 'react';
 import Page from '../UI/Page';
 import './ClientsPage.scss';
 
-const ClientsPage = ({}) => {
+const ClientsPage = () => {
   const clientsContent = [
     {
       label: 'Council for Cultural Affairs (CCA)',

@@ -5,18 +5,20 @@ import './Footer.scss';
 const Footer = () => {
   return (
     <section className="footer--container">
-      <Logo />
-      {footerData.map((data) => {
-        return (
-          <section key={data.label} className="footer-data">
-            <h1>{data.label}</h1>
-            <h3>{data.data}</h3>
-          </section>
-        );
-      })}
-      <Link to="/contact" className="footer--button">
-        Contact Us
-      </Link>
+      <section className="footer--content">
+        <Logo />
+        {footerData.map((data) => {
+          return (
+            <section key={data.label} className="footer-data">
+              <h1>{data.label}</h1>
+              <h3>{data.data}</h3>
+            </section>
+          );
+        })}
+        <Link to="/contact" className="footer--button">
+          Contact Us
+        </Link>
+      </section>
     </section>
   );
 };

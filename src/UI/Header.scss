@@ -36,6 +36,8 @@
   }
 
   .menu-container--desktop {
+    max-width: $max-width;
+    margin: 0 auto;
     padding: 0px 20px;
     display: grid;
     grid-template-columns: 75px auto 75px;

@@ -2,7 +2,9 @@
 
 .contact-page--container {
   margin: 0 auto;
+  padding-bottom: 100px;
   min-height: 100vh;
+  height: 100%;
   background-color: $grey-100;
 
   .contact-page--header {
@@ -18,7 +20,6 @@
   .contact-page--content {
     max-width: $max-width;
     margin: 0 auto;
-    margin-bottom: 100px;
     background-color: white;
     padding: 20px;
     box-shadow: $box-shadow;

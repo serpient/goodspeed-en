@@ -4,9 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './homePage/index';
 import AboutPage from './AboutPage/index';
 import ClientsPage from './ClientsPage/index';
+import ServicesPage from './ServicesPage/index';
 import ContactPage from './ContactPage/index';
 import Header from './UI/Header';
 import Footer from './UI/Footer';
+import serviceItems from './services/serviceItems';
 
 const App = (props) => {
   return (
@@ -25,9 +27,16 @@ const App = (props) => {
         <Route exact path="/contact">
           <ContactPage {...props} />
         </Route>
-        <Route exact path="/services/">
-          <ContactPage {...props} />
+        <Route exact path="/services">
+          <ServicesPage {...props} />
         </Route>
+        {serviceItems.map((services) => {
+          return (
+            <Route exact path={services.link}>
+              <ServicesPage {...props} />
+            </Route>
+          );
+        })}
       </Switch>
       <Footer />
     </div>

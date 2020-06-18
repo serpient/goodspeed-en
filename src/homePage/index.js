@@ -26,7 +26,6 @@ const HomePage = (props) => {
             return (
               <div>
                 <img src={item.source} alt={item.name} />
-                <p className="legend">{item.name}</p>
               </div>
             );
           })}

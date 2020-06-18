@@ -22,18 +22,6 @@
       min-height: 500px;
       object-fit: cover;
     }
-    p {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-      margin-top: -50px;
-      margin-bottom: 50px;
-      font-size: 18px;
-      font-weight: bold;
-    }
   }
 
   .home-page--services--container {
@@ -69,21 +57,21 @@
       display: grid;
       box-sizing: border-box;
       background-color: $theme-color;
-      width: 75px;
-      height: 75px;
+      width: 60px;
+      height: 60px;
       border-radius: 10px;
       align-items: center;
       justify-items: center;
 
       .icon--4k {
         color: white;
-        font-size: 42px;
+        font-size: 30px;
         font-weight: bold;
       }
     }
     i {
       display: block;
-      font-size: 42px;
+      font-size: 30px;
       color: white;
     }
   }
